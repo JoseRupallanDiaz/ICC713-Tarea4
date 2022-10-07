@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 2</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html"><strong>Mi página</strong></a>
+        </div>
+    </nav>
+    <div class="container overflow-hidden">
+        <div class="row">
+            <div class="col text-center py-5 my-5">
+                <h1 class="display-6">Galería de Fotos</h1>
+                <p class="lead">Elige una sección para ver más imágenes.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="./img/buho.jpg" class="card-img-top" alt="Búho">
+                    <div class="card-body">
+                        <h5 class="card-title">Búhos</h5>
+                        <p class="card-text" id="buhostextcard">¿Sabías que...? A un grupo de búhos se les llama
+                            "parlamento".</p>
+                        <a class="btn btn-primary" onclick='buhoMas("buhostextcard")'>Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="./img/frases-atardecer-wide.jpg" class="card-img-top" alt="Atardecer" id="atardecer">
+                    <div class="card-body">
+                        <h5 class="card-title">Atardeceres</h5>
+                        <p class="card-text">Hermosos y dañinos a la vista.</p>
+                        <a class="btn btn-primary" onclick='cambiarFoto("atardecer")'>Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="./img/5-rasgos-que-definen-la-personalidad-de-los-gatos.jpg" class="card-img-top"
+                        alt="Gatos">
+                    <div class="card-body">
+                        <h5 class="card-title">Gatos</h5>
+                        <p class="card-text">Los únicos animales que se domesticaron solos, probablemente.</p>
+                        <a class="btn btn-primary" id="gatobutton" onclick='cambioLetra("gatobutton")'>Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row m-5">
+            <div class="d-flex flex-column align-items-center">
+                <h1 class="display-6 w-10">Formulario</h1>
+                <form id ="form" class="d-flex flex-column w-50 gap-3">
+                    <div>
+                        <label for="email" class="form-label">Email</label>
+                        <input id="email" class="form-control" type="text">
+                    </div>
+                    <div>
+                        <label for="name" class="form-label">Nombre</label>
+                        <input id="name" class="form-control" type="text">
+                    </div>
+                    <div>
+                        <label for="yearsold" class="form-label">Edad</label>
+                        <input id="yearsold" class="form-control" type="number">
+                    </div>
+                    <div>
+                        <label for="city" class="form-label">Ciudad</label>
+                        <select name="city" id="city" class="form-select">
+                            <option selected value="null">Elegir ciudad...</option>
+                            <option value="Temuco">Temuco</option>
+                            <option value="Villarrica">Villarrica</option>
+                            <option value="Pucon">Pucón</option>
+                            <option value="Valparaiso">Valparaiso</option>
+                            <option value="Santiago">Santiago</option>
+                            <option value="Valdivia">Valdivia</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input id="check" class="form-check-input" type="checkbox">
+                        <label for="check" class="form-check-label">Aceptar los terminos y condiciones.</label>
+                    </div>
+                    <div class="align-self-center">
+                        <a class="btn btn-primary" onclick='formSubmit()'>Enviar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row bg-dark text-light py-4 px-5">
+            <div class="col">
+                <h5>SOBRE NOSOTROS</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="col">
+                <h5>SOBRE NOSOTROS</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+        <div class="row text-light footer text-center py-3">
+            <span>© 2022 Copyright: <a class="text-light" href="https://www.ufro.cl">www.ufro.cl</a>.</span>
+        </div>
+    </div>
+</body>
+
+</html>
